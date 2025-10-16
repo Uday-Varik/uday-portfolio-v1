@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Engineer Portfolio - Alex Chen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Dynamic Data Files -->
+    <script src="./data/projects.js"></script>
+    <script src="./data/blogs.js"></script>
+    <script src="./data/case-studies.js"></script>
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f6f0;
+            --accent-amber: #d4a574;
+            --accent-teal: #5a8a8a;
+            --accent-gray: #6b7d8c;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--primary-light);
+            overflow-x: hidden;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(26,26,26,0.8), rgba(90,138,138,0.3)), 
+                        url('./resources/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-amber), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(212, 165, 116, 0.2);
+        }
+        
+        .skill-item {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .project-card {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-amber);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .tech-tag {
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            color: var(--accent-amber);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold gradient-text">Alex Chen</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="projects.html" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="blog.html" class="nav-link text-gray-300 hover:text-white">Blog</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-transparent to-gray-900 opacity-50"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <div class="floating-element mb-8">
+                <img src="./resources/avatar.jpg" alt="Alex Chen" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-amber-400 shadow-2xl">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="gradient-text">AI/ML Engineer</span>
+            </h1>
+            <div class="text-xl md:text-2xl text-gray-300 mb-8 h-16">
+                <span id="typed-text"></span>
+            </div>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Transforming complex data into intelligent solutions. Specializing in computer vision, 
+                natural language processing, and deep learning architectures that drive real-world impact.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="projects.html" class="bg-amber-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-amber-400 transition-all duration-300 transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="contact.html" class="border border-amber-500 text-amber-500 px-8 py-3 rounded-full font-semibold hover:bg-amber-500 hover:text-black transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Tech Icons -->
+        <div class="absolute top-20 left-10 floating-element opacity-20">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">AI</div>
+        </div>
+        <div class="absolute bottom-32 right-16 floating-element opacity-20" style="animation-delay: -2s;">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center text-white font-bold">ML</div>
+        </div>
+        <div class="absolute top-1/2 right-8 floating-element opacity-20" style="animation-delay: -4s;">
+            <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center text-white font-bold">DL</div>
+        </div>
+    </section>
+
+    <!-- Skills Radar Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Technical Expertise</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Comprehensive skill set across the AI/ML ecosystem, from data preprocessing to model deployment
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="section-reveal">
+                    <div id="skills-radar" style="width: 100%; height: 400px;"></div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Machine Learning</span>
+                            <span class="text-amber-500">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Deep Learning</span>
+                            <span class="text-amber-500">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">Computer Vision</span>
+                            <span class="text-amber-500">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">NLP</span>
+                            <span class="text-amber-500">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-lg font-semibold">MLOps</span>
+                            <span class="text-amber-500">82%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Featured Projects</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Innovative solutions that bridge the gap between research and real-world applications
+                </p>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active bg-amber-500 text-black px-6 py-2 rounded-full font-semibold transition-all duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300" data-filter="cv">
+                    Computer Vision
+                </button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300" data-filter="nlp">
+                    NLP
+                </button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px-6 py-2 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300" data-filter="dl">
+                    Deep Learning
+                </button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-projects">
+                <div class="project-card card-hover bg-gray-900 rounded-xl overflow-hidden border border-gray-800" data-category="cv">
+                    <img src="./resources/project-cv.jpg" alt="Real-time Object Detection" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Real-time Object Detection</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                            YOLOv8-based detection system achieving 95% accuracy on custom datasets. 
+                            Deployed on edge devices with real-time processing capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-amber-500 hover:text-amber-400 font-semibold text-sm">View Case Study</a>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card card-hover bg-gray-900 rounded-xl overflow-hidden border border-gray-800" data-category="nlp">
+                    <img src="./resources/project-nlp.jpg" alt="Sentiment Analysis Engine" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Sentiment Analysis Engine</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                            BERT-based sentiment analysis achieving 92% accuracy on social media data. 
+                            Real-time processing with multilingual support.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-amber-500 hover:text-amber-400 font-semibold text-sm">View Case Study</a>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card card-hover bg-gray-900 rounded-xl overflow-hidden border border-gray-800" data-category="dl">
+                    <img src="./resources/project-dl.jpg" alt="Neural Architecture Search" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Neural Architecture Search</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                            Automated neural architecture optimization using genetic algorithms. 
+                            Achieved 15% performance improvement over hand-designed networks.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">AutoML</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-amber-500 hover:text-amber-400 font-semibold text-sm">View Case Study</a>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card card-hover bg-gray-900 rounded-xl overflow-hidden border border-gray-800" data-category="cv">
+                    <img src="./resources/project-ds.jpg" alt="Medical Image Analysis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Medical Image Analysis</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                            CNN-based diagnostic system for medical imaging. Assisting radiologists with 
+                            automated anomaly detection and classification.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">ResNet</span>
+                            <span class="tech-tag">DICOM</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-amber-500 hover:text-amber-400 font-semibold text-sm">View Case Study</a>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card card-hover bg-gray-900 rounded-xl overflow-hidden border border-gray-800" data-category="nlp">
+                    <img src="./resources/project-ai.jpg" alt="Chatbot Development" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Intelligent Chatbot</h3>
+                        <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                            Advanced conversational AI using GPT-3.5 and custom fine-tuning. 
+                            Handles complex queries with context-aware responses.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">GPT-3.5</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-amber-500 hover:text-amber-400 font-semibold text-sm">View Case Study</a>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="projects.html" class="bg-amber-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-amber-400 transition-all duration-300 transform hover:scale-105">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-4xl font-bold gradient-text mb-4">What People Say</h2>
+                <p class="text-gray-400 text-lg">
+                    Feedback from clients and colleagues
+                </p>
+            </div>
+            
+            <div class="splide" id="testimonials-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="bg-gray-800 rounded-xl p-8 text-center max-w-2xl mx-auto">
+                                <div class="text-amber-500 text-4xl mb-4">"</div>
+                                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                                    "Alex's expertise in computer vision transformed our medical imaging workflow. 
+                                    The accuracy and speed of the solution exceeded our expectations."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-400 rounded-full flex items-center justify-center text-black font-bold mr-4">
+                                        SM
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Sarah Mitchell</h4>
+                                        <p class="text-gray-400 text-sm">CTO, HealthTech Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="bg-gray-800 rounded-xl p-8 text-center max-w-2xl mx-auto">
+                                <div class="text-amber-500 text-4xl mb-4">"</div>
+                                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                                    "Working with Alex was a game-changer for our NLP projects. 
+                                    The sentiment analysis engine delivered results that significantly improved our customer insights."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        MJ
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Michael Johnson</h4>
+                                        <p class="text-gray-400 text-sm">Data Science Lead, MarketAnalytics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="bg-gray-800 rounded-xl p-8 text-center max-w-2xl mx-auto">
+                                <div class="text-amber-500 text-4xl mb-4">"</div>
+                                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                                    "Alex's deep learning solutions helped us optimize our manufacturing process. 
+                                    The ROI was evident within the first quarter of implementation."
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        EC
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Emily Chen</h4>
+                                        <p class="text-gray-400 text-sm">Director of Innovation, AutoCorp</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="text-2xl font-bold gradient-text mb-2">Alex Chen</div>
+                <p class="text-gray-400">AI/ML Engineer & Researcher</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2024 Alex Chen. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="dynamic-main.js"></script>
+</body>
+</html>
