@@ -1,0 +1,1682 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..f79ccfbb64de0dfd0901a50005c095b97ad3abd5
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,5 @@
++node_modules/
++.env
++.env.*
++package-lock.json
++.DS_Store
+diff --git a/README.md b/README.md
+index 805ea8aa5fb0144efb03d24117f820a9e69c9764..416e7fc3a7d93e3182d1b52dff8c08be6999ad8a 100644
+GIT binary patch
+literal 5048
+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
+E3$yyda{vGU
+
+literal 44
+wcmezWPnki1p_CzoA(5eyL6@O`A)ld$p@bm~NarwQ0!dwlG6q8iUIs1(0QRH^>Hq)$
+
+diff --git a/app/blog.html b/app/blog.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0db4cab5a22aebb071a01298130bc453cf396dd
+--- /dev/null
++++ b/app/blog.html
+@@ -0,0 +1,51 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Blog · Dynamic MVP</title>
++    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
++    <style>
++      body { font-family: 'Inter', sans-serif; }
++    </style>
++  </head>
++  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="blog">
++    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
++      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
++        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
++        <nav class="flex items-center gap-6" data-navigation>
++          <span class="text-sm text-slate-500">Loading navigation…</span>
++        </nav>
++      </div>
++    </header>
++
++    <main class="mx-auto max-w-4xl px-6 py-16 space-y-12">
++      <header class="space-y-4">
++        <p class="text-sm uppercase tracking-[0.4em] text-emerald-300/80">Notebook</p>
++        <h1 class="text-4xl font-bold text-white">Blog</h1>
++        <p class="max-w-2xl text-lg text-slate-300">
++          Stories and tactics on building production-grade AI systems. Every post is fetched from Supabase, allowing Payload or Keystone to own the authoring workflow.
++        </p>
++      </header>
++
++      <section class="grid gap-6" data-blog-list>
++        <p class="text-sm text-slate-500">Loading posts…</p>
++      </section>
++    </main>
++
++    <footer class="border-t border-slate-800/80 bg-slate-950/80">
++      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
++        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
++        <p>© <span data-year></span> Built with Supabase.</p>
++      </div>
++    </footer>
++
++    <script>
++      document.querySelector('[data-year]').textContent = new Date().getFullYear();
++    </script>
++    <script type="module" src="../src/app.js"></script>
++  </body>
++</html>
+diff --git a/app/contact.html b/app/contact.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..683c56b77e874e09e897e075d0aca60df3f3e80d
+--- /dev/null
++++ b/app/contact.html
+@@ -0,0 +1,61 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Contact · Dynamic MVP</title>
++    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
++    <style>
++      body { font-family: 'Inter', sans-serif; }
++    </style>
++  </head>
++  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="contact">
++    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
++      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
++        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
++        <nav class="flex items-center gap-6" data-navigation>
++          <span class="text-sm text-slate-500">Loading navigation…</span>
++        </nav>
++      </div>
++    </header>
++
++    <main class="mx-auto max-w-4xl px-6 py-16 space-y-12">
++      <header class="space-y-4">
++        <p class="text-sm uppercase tracking-[0.4em] text-emerald-300/80">Collaborate</p>
++        <h1 class="text-4xl font-bold text-white">Contact</h1>
++        <p class="max-w-2xl text-lg text-slate-300" data-contact-intro>
++          Let\'s team up on your next AI project. Every contact channel lives in Supabase so you can update details without redeploying the site.
++        </p>
++      </header>
++
++      <section class="space-y-4" data-contact-channels>
++        <p class="text-sm text-slate-500">Loading contact options…</p>
++      </section>
++
++      <section class="rounded-3xl border border-slate-800/70 bg-slate-900/40 p-10">
++        <h2 class="text-2xl font-semibold text-white">Integrate with your CMS</h2>
++        <p class="mt-3 text-sm text-slate-400">
++          Use the provided Payload and Keystone scripts to push structured content into Supabase. They handle upserts, so you can run them repeatedly as part of your publishing pipeline.
++        </p>
++        <a class="mt-6 inline-flex items-center gap-3 text-sm font-medium text-emerald-300 hover:text-emerald-200" href="https://supabase.com" target="_blank" rel="noopener noreferrer">
++          Explore Supabase docs
++        </a>
++      </section>
++    </main>
++
++    <footer class="border-t border-slate-800/80 bg-slate-950/80">
++      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
++        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
++        <p>© <span data-year></span> Built with Supabase.</p>
++      </div>
++    </footer>
++
++    <script>
++      document.querySelector('[data-year]').textContent = new Date().getFullYear();
++    </script>
++    <script type="module" src="../src/app.js"></script>
++  </body>
++</html>
+diff --git a/app/index.html b/app/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..7138366e6f58eca483c8f54c15f82b8156cad1dd
+--- /dev/null
++++ b/app/index.html
+@@ -0,0 +1,131 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Portfolio · Dynamic MVP</title>
++    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
++    <style>
++      body { font-family: 'Inter', sans-serif; }
++      .filter-button {
++        border-radius: 9999px;
++        border: 1px solid rgba(100, 116, 139, 0.6);
++        padding: 0.5rem 1rem;
++        font-size: 0.875rem;
++        font-weight: 500;
++        color: rgb(226, 232, 240);
++        transition: all 0.2s ease;
++      }
++      .filter-button:hover {
++        border-color: rgb(16, 185, 129);
++        color: rgb(110, 231, 183);
++      }
++      .filter-button.active {
++        border-color: rgb(16, 185, 129);
++        background-color: rgba(16, 185, 129, 0.1);
++        color: rgb(16, 185, 129);
++      }
++    </style>
++  </head>
++  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="home">
++    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
++      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
++        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
++        <nav class="flex items-center gap-6" data-navigation>
++          <span class="text-sm text-slate-500">Loading navigation…</span>
++        </nav>
++      </div>
++    </header>
++
++    <main class="mx-auto max-w-6xl px-6 py-16 space-y-20">
++      <section class="grid gap-10 lg:grid-cols-2" data-hero>
++        <div class="space-y-6">
++          <p class="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-300/80">AI Researcher & Builder</p>
++          <h1 class="text-4xl font-bold text-white md:text-5xl" data-hero-heading>Building intelligent systems.</h1>
++          <p class="text-lg text-slate-300" data-hero-subheading>
++            I help founders ship AI-powered products faster using modern research, thoughtful design, and reliable engineering.
++          </p>
++          <div class="flex flex-wrap gap-4">
++            <a
++              class="inline-flex items-center gap-3 rounded-full border border-emerald-500/60 bg-emerald-500/10 px-6 py-3 font-medium text-emerald-200 transition hover:bg-emerald-500/20"
++              data-hero-cta
++              href="./contact.html"
++            >Start a project</a>
++          </div>
++        </div>
++        <div class="rounded-3xl border border-slate-800/80 bg-slate-900/40 p-8 shadow-xl shadow-black/30">
++          <h2 class="text-lg font-semibold text-white">Momentum snapshot</h2>
++          <dl class="mt-6 grid grid-cols-2 gap-6 text-sm text-slate-300">
++            <div>
++              <dt class="text-emerald-300/80">Shipped products</dt>
++              <dd class="text-3xl font-bold text-white">12</dd>
++            </div>
++            <div>
++              <dt class="text-emerald-300/80">Research citations</dt>
++              <dd class="text-3xl font-bold text-white">48</dd>
++            </div>
++            <div>
++              <dt class="text-emerald-300/80">Avg. ROI</dt>
++              <dd class="text-3xl font-bold text-white">4.6x</dd>
++            </div>
++            <div>
++              <dt class="text-emerald-300/80">Countries served</dt>
++              <dd class="text-3xl font-bold text-white">9</dd>
++            </div>
++          </dl>
++        </div>
++      </section>
++
++      <section class="space-y-6">
++        <header class="flex items-end justify-between">
++          <div>
++            <h2 class="text-3xl font-semibold text-white">Featured work</h2>
++            <p class="text-sm text-slate-400">Curated projects automatically pulled from Supabase</p>
++          </div>
++          <a class="text-sm font-medium text-emerald-300 hover:text-emerald-200" href="./projects.html">See all</a>
++        </header>
++        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-featured-projects>
++          <p class="text-sm text-slate-500">Loading featured projects…</p>
++        </div>
++      </section>
++
++      <section class="space-y-6">
++        <header class="flex items-end justify-between">
++          <div>
++            <h2 class="text-3xl font-semibold text-white">Latest thinking</h2>
++            <p class="text-sm text-slate-400">Long-form articles, notes, and research updates</p>
++          </div>
++          <a class="text-sm font-medium text-emerald-300 hover:text-emerald-200" href="./blog.html">Read the blog</a>
++        </header>
++        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-latest-posts>
++          <p class="text-sm text-slate-500">Loading blog posts…</p>
++        </div>
++      </section>
++
++      <section class="space-y-6">
++        <header>
++          <h2 class="text-3xl font-semibold text-white">Testimonials</h2>
++          <p class="text-sm text-slate-400">Signals from founders and research partners</p>
++        </header>
++        <div class="grid gap-6 md:grid-cols-2" data-testimonials>
++          <p class="text-sm text-slate-500">Loading testimonials…</p>
++        </div>
++      </section>
++    </main>
++
++    <footer class="border-t border-slate-800/80 bg-slate-950/80">
++      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
++        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
++        <p>© <span data-year></span> Built with Supabase.</p>
++      </div>
++    </footer>
++
++    <script>
++      document.querySelector('[data-year]').textContent = new Date().getFullYear();
++    </script>
++    <script type="module" src="../src/app.js"></script>
++  </body>
++</html>
+diff --git a/app/projects.html b/app/projects.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f54b65da4f047b29cb1e2214aa495f63651aba7
+--- /dev/null
++++ b/app/projects.html
+@@ -0,0 +1,73 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Projects · Dynamic MVP</title>
++    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
++    <style>
++      body { font-family: 'Inter', sans-serif; }
++      .filter-button {
++        border-radius: 9999px;
++        border: 1px solid rgba(100, 116, 139, 0.6);
++        padding: 0.5rem 1rem;
++        font-size: 0.875rem;
++        font-weight: 500;
++        color: rgb(226, 232, 240);
++        transition: all 0.2s ease;
++      }
++      .filter-button:hover {
++        border-color: rgb(16, 185, 129);
++        color: rgb(110, 231, 183);
++      }
++      .filter-button.active {
++        border-color: rgb(16, 185, 129);
++        background-color: rgba(16, 185, 129, 0.1);
++        color: rgb(16, 185, 129);
++      }
++    </style>
++  </head>
++  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="projects">
++    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
++      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
++        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
++        <nav class="flex items-center gap-6" data-navigation>
++          <span class="text-sm text-slate-500">Loading navigation…</span>
++        </nav>
++      </div>
++    </header>
++
++    <main class="mx-auto max-w-6xl px-6 py-16 space-y-12">
++      <header class="space-y-4">
++        <p class="text-sm uppercase tracking-[0.4em] text-emerald-300/80">Case studies</p>
++        <h1 class="text-4xl font-bold text-white">Projects</h1>
++        <p class="max-w-2xl text-lg text-slate-300">
++          Every project is stored in Supabase, making it easy to reorganize, update, or publish new case studies from any headless CMS.
++        </p>
++      </header>
++
++      <div class="flex flex-wrap gap-3" data-project-filters>
++        <span class="text-sm text-slate-500">Loading filters…</span>
++      </div>
++
++      <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-project-list>
++        <p class="text-sm text-slate-500">Loading projects…</p>
++      </section>
++    </main>
++
++    <footer class="border-t border-slate-800/80 bg-slate-950/80">
++      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
++        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
++        <p>© <span data-year></span> Built with Supabase.</p>
++      </div>
++    </footer>
++
++    <script>
++      document.querySelector('[data-year]').textContent = new Date().getFullYear();
++    </script>
++    <script type="module" src="../src/app.js"></script>
++  </body>
++</html>
+diff --git a/cms/keystone-to-supabase.js b/cms/keystone-to-supabase.js
+new file mode 100755
+index 0000000000000000000000000000000000000000..09f71b4a7e71d19e72447cb1d59e9d4556dcb0c1
+--- /dev/null
++++ b/cms/keystone-to-supabase.js
+@@ -0,0 +1,116 @@
++#!/usr/bin/env node
++import { createSupabaseClient, loadJsonFromFile, parseArgs, upsertCollection } from './shared.js';
++
++const usage = `\nUsage: npm run sync:keystone -- --file=keystone-export.json\n`;
++
++function mapKeystoneToSupabase(data) {
++  const projects = data.projects?.map((project) => ({
++    id: project.id,
++    title: project.name,
++    summary: project.summary,
++    tech_stack: project.techStack,
++    case_study_url: project.caseStudyUrl,
++    is_featured: Boolean(project.isFeatured),
++    position: project.order ?? 0,
++    created_at: project.createdAt,
++    updated_at: project.updatedAt
++  })) ?? [];
++
++  const blogPosts = data.posts?.map((post) => ({
++    id: post.id,
++    title: post.title,
++    slug: post.slug,
++    excerpt: post.excerpt,
++    url: post.externalUrl,
++    published_at: post.publishedAt,
++    read_time_minutes: post.readTime,
++    created_at: post.createdAt,
++    updated_at: post.updatedAt
++  })) ?? [];
++
++  const testimonials = data.testimonials?.map((testimonial) => ({
++    id: testimonial.id,
++    author_name: testimonial.person,
++    role: testimonial.role,
++    quote: testimonial.quote,
++    position: testimonial.order ?? 0
++  })) ?? [];
++
++  const navigation = data.navigation?.map((item, index) => ({
++    id: item.id ?? index + 1,
++    label: item.label,
++    href: item.href,
++    position: item.position ?? index
++  })) ?? [];
++
++  const contactChannels = data.contactChannels?.map((channel, index) => ({
++    id: channel.id ?? index + 1,
++    label: channel.label,
++    url: channel.url,
++    description: channel.description,
++    display_value: channel.displayValue,
++    position: channel.position ?? index
++  })) ?? [];
++
++  const siteSettings = data.siteSettings
++    ? {
++        id: data.siteSettings.id ?? 1,
++        site_title: data.siteSettings.siteTitle,
++        tagline: data.siteSettings.tagline,
++        contact_pitch: data.siteSettings.contactPitch
++      }
++    : null;
++
++  const pages = data.pages?.map((page) => ({
++    id: page.id,
++    slug: page.slug,
++    hero_heading: page.heroHeading,
++    hero_subheading: page.heroSubheading,
++    call_to_action_label: page.callToActionLabel,
++    call_to_action_url: page.callToActionUrl
++  })) ?? [];
++
++  return {
++    projects,
++    blogPosts,
++    testimonials,
++    navigation,
++    contactChannels,
++    siteSettings,
++    pages
++  };
++}
++
++async function main() {
++  const args = parseArgs(process.argv);
++
++  try {
++    if (!args.file) {
++      throw new Error(`Missing Keystone export file. ${usage}`);
++    }
++
++    const raw = await loadJsonFromFile(args.file);
++    const client = createSupabaseClient();
++    const mapped = mapKeystoneToSupabase(raw);
++
++    if (mapped.siteSettings) {
++      await upsertCollection(client, 'site_settings', [mapped.siteSettings], 'id');
++    }
++
++    await Promise.all([
++      upsertCollection(client, 'navigation_links', mapped.navigation, 'id'),
++      upsertCollection(client, 'projects', mapped.projects, 'id'),
++      upsertCollection(client, 'blog_posts', mapped.blogPosts, 'id'),
++      upsertCollection(client, 'testimonials', mapped.testimonials, 'id'),
++      upsertCollection(client, 'contact_channels', mapped.contactChannels, 'id'),
++      upsertCollection(client, 'pages', mapped.pages, 'id')
++    ]);
++
++    console.log('Keystone sync complete.');
++  } catch (error) {
++    console.error('Keystone sync failed:', error.message);
++    process.exitCode = 1;
++  }
++}
++
++main();
+diff --git a/cms/payload-to-supabase.js b/cms/payload-to-supabase.js
+new file mode 100755
+index 0000000000000000000000000000000000000000..7aa4c7be0b18c225d861e83f610a421f21724522
+--- /dev/null
++++ b/cms/payload-to-supabase.js
+@@ -0,0 +1,124 @@
++#!/usr/bin/env node
++import { createSupabaseClient, fetchJson, loadJsonFromFile, parseArgs, upsertCollection } from './shared.js';
++
++const usage = `\nUsage: npm run sync:payload -- --file=export.json\n       npm run sync:payload -- --endpoint=https://cms.example.com/api/export --token=API_TOKEN\n`;
++
++async function loadPayloadSource(args) {
++  if (args.file) {
++    return loadJsonFromFile(args.file);
++  }
++
++  if (args.endpoint) {
++    return fetchJson(args.endpoint, args.token);
++  }
++
++  throw new Error(`Missing data source. Provide --file or --endpoint. ${usage}`);
++}
++
++function mapPayloadToSupabase(payloadData) {
++  const projects = payloadData.projects?.map((project) => ({
++    id: project.id,
++    title: project.title,
++    summary: project.summary,
++    tech_stack: project.techStack?.join(', ') ?? project.tech_stack,
++    case_study_url: project.caseStudyUrl ?? project.case_study_url,
++    is_featured: Boolean(project.isFeatured ?? project.is_featured),
++    position: project.position ?? project.order ?? 0,
++    created_at: project.createdAt ?? project.created_at,
++    updated_at: project.updatedAt ?? project.updated_at
++  })) ?? [];
++
++  const blogPosts = payloadData.blogPosts?.map((post) => ({
++    id: post.id,
++    title: post.title,
++    slug: post.slug,
++    excerpt: post.excerpt,
++    url: post.externalUrl ?? post.url,
++    published_at: post.publishedAt ?? post.published_at,
++    read_time_minutes: post.readTime ?? post.read_time_minutes,
++    created_at: post.createdAt ?? post.created_at,
++    updated_at: post.updatedAt ?? post.updated_at
++  })) ?? [];
++
++  const testimonials = payloadData.testimonials?.map((testimonial) => ({
++    id: testimonial.id,
++    author_name: testimonial.authorName ?? testimonial.author_name,
++    role: testimonial.role,
++    quote: testimonial.quote,
++    position: testimonial.position ?? 0
++  })) ?? [];
++
++  const navigation = payloadData.navigationLinks?.map((link, index) => ({
++    id: link.id ?? index + 1,
++    label: link.label,
++    href: link.href ?? link.url,
++    position: link.position ?? index
++  })) ?? [];
++
++  const contactChannels = payloadData.contactChannels?.map((channel, index) => ({
++    id: channel.id ?? index + 1,
++    label: channel.label,
++    url: channel.url,
++    description: channel.description,
++    display_value: channel.displayValue ?? channel.display_value,
++    position: channel.position ?? index
++  })) ?? [];
++
++  const siteSettings = payloadData.siteSettings
++    ? {
++        id: payloadData.siteSettings.id ?? 1,
++        site_title: payloadData.siteSettings.siteTitle ?? payloadData.siteSettings.site_title,
++        tagline: payloadData.siteSettings.tagline,
++        contact_pitch: payloadData.siteSettings.contactPitch ?? payloadData.siteSettings.contact_pitch
++      }
++    : null;
++
++  const pages = payloadData.pages?.map((page) => ({
++    id: page.id,
++    slug: page.slug,
++    hero_heading: page.heroHeading ?? page.hero_heading,
++    hero_subheading: page.heroSubheading ?? page.hero_subheading,
++    call_to_action_label: page.callToActionLabel ?? page.call_to_action_label,
++    call_to_action_url: page.callToActionUrl ?? page.call_to_action_url
++  })) ?? [];
++
++  return {
++    projects,
++    blogPosts,
++    testimonials,
++    navigation,
++    contactChannels,
++    siteSettings,
++    pages
++  };
++}
++
++async function main() {
++  const args = parseArgs(process.argv);
++
++  try {
++    const payloadData = await loadPayloadSource(args);
++    const client = createSupabaseClient();
++    const mapped = mapPayloadToSupabase(payloadData);
++
++    if (mapped.siteSettings) {
++      await upsertCollection(client, 'site_settings', [mapped.siteSettings], 'id');
++    }
++
++    await Promise.all([
++      upsertCollection(client, 'navigation_links', mapped.navigation, 'id'),
++      upsertCollection(client, 'projects', mapped.projects, 'id'),
++      upsertCollection(client, 'blog_posts', mapped.blogPosts, 'id'),
++      upsertCollection(client, 'testimonials', mapped.testimonials, 'id'),
++      upsertCollection(client, 'contact_channels', mapped.contactChannels, 'id'),
++      upsertCollection(client, 'pages', mapped.pages, 'id')
++    ]);
++
++    console.log('Payload sync complete.');
++  } catch (error) {
++    console.error('Payload sync failed:', error.message);
++    process.exitCode = 1;
++  }
++}
++
++main();
+diff --git a/cms/shared.js b/cms/shared.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b1fff89d92a913a02b51735b185c196810a5b1b
+--- /dev/null
++++ b/cms/shared.js
+@@ -0,0 +1,68 @@
++import { createClient } from '@supabase/supabase-js';
++import dotenv from 'dotenv';
++
++dotenv.config();
++
++export function createSupabaseClient() {
++  const url = process.env.SUPABASE_URL;
++  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
++
++  if (!url || !key) {
++    throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY/ANON_KEY environment variables.');
++  }
++
++  return createClient(url, key, {
++    auth: { persistSession: false }
++  });
++}
++
++export async function upsertCollection(client, table, rows, onConflict = 'id') {
++  if (!Array.isArray(rows) || rows.length === 0) {
++    console.warn(`No rows provided for ${table}, skipping.`);
++    return { data: [], error: null };
++  }
++
++  const { data, error } = await client.from(table).upsert(rows, {
++    onConflict,
++    ignoreDuplicates: false
++  });
++
++  if (error) {
++    throw new Error(`Failed to upsert into ${table}: ${error.message}`);
++  }
++
++  return { data };
++}
++
++export function parseArgs(argv) {
++  return argv.slice(2).reduce((acc, arg) => {
++    if (arg.startsWith('--')) {
++      const [key, value = true] = arg.replace(/^--/, '').split('=');
++      acc[key] = value;
++    }
++    return acc;
++  }, {});
++}
++
++export async function loadJsonFromFile(path) {
++  const { readFile } = await import('node:fs/promises');
++  const { resolve } = await import('node:path');
++  const file = await readFile(resolve(path), 'utf-8');
++  return JSON.parse(file);
++}
++
++export async function fetchJson(endpoint, token) {
++  const response = await fetch(endpoint, {
++    headers: token
++      ? {
++          Authorization: `Bearer ${token}`
++        }
++      : undefined
++  });
++
++  if (!response.ok) {
++    throw new Error(`Failed to fetch ${endpoint}: ${response.status} ${response.statusText}`);
++  }
++
++  return response.json();
++}
+diff --git a/package.json b/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..431e057a525631e24378b1f919b062290eebea5a
+--- /dev/null
++++ b/package.json
+@@ -0,0 +1,16 @@
++{
++  "name": "uday-portfolio-mvp",
++  "version": "1.0.0",
++  "description": "Dynamic MVP portfolio powered by Supabase as a headless CMS.",
++  "type": "module",
++  "scripts": {
++    "dev": "node scripts/devServer.js",
++    "sync:payload": "node cms/payload-to-supabase.js",
++    "sync:keystone": "node cms/keystone-to-supabase.js",
++    "test": "node --test"
++  },
++  "dependencies": {
++    "@supabase/supabase-js": "^2.43.4",
++    "dotenv": "^16.4.5"
++  }
++}
+diff --git a/scripts/devServer.js b/scripts/devServer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..201aa84d719f22ab79d1297724f879bc5fd0d151
+--- /dev/null
++++ b/scripts/devServer.js
+@@ -0,0 +1,87 @@
++import http from 'node:http';
++import { dirname, resolve } from 'node:path';
++import { fileURLToPath } from 'node:url';
++import { promises as fs } from 'node:fs';
++
++const __dirname = dirname(fileURLToPath(import.meta.url));
++const rootDir = resolve(__dirname, '..');
++const defaultFile = 'index.html';
++
++const mimeTypes = new Map([
++  ['.html', 'text/html; charset=UTF-8'],
++  ['.js', 'application/javascript; charset=UTF-8'],
++  ['.css', 'text/css; charset=UTF-8'],
++  ['.json', 'application/json; charset=UTF-8'],
++  ['.svg', 'image/svg+xml'],
++  ['.png', 'image/png'],
++  ['.jpg', 'image/jpeg'],
++  ['.jpeg', 'image/jpeg'],
++  ['.gif', 'image/gif'],
++  ['.ico', 'image/x-icon']
++]);
++
++function getContentType(pathname) {
++  const index = pathname.lastIndexOf('.');
++  if (index === -1) {
++    return 'application/octet-stream';
++  }
++
++  const extension = pathname.slice(index);
++  return mimeTypes.get(extension) ?? 'application/octet-stream';
++}
++
++async function readFileSafe(filePath) {
++  try {
++    const data = await fs.readFile(filePath);
++    return { data };
++  } catch (error) {
++    return { error };
++  }
++}
++
++function createServer() {
++  const port = Number(process.env.PORT ?? 3000);
++
++  return http.createServer(async (req, res) => {
++    const requestUrl = new URL(req.url, `http://${req.headers.host}`);
++    let pathname = decodeURIComponent(requestUrl.pathname);
++
++    if (pathname.endsWith('/')) {
++      pathname = pathname.concat(defaultFile);
++    }
++
++    const filePath = resolve(rootDir, `.${pathname}`);
++
++    if (!filePath.startsWith(rootDir)) {
++      res.writeHead(403, { 'Content-Type': 'text/plain; charset=UTF-8' });
++      res.end('Access denied');
++      return;
++    }
++
++    const { data, error } = await readFileSafe(filePath);
++
++    if (error) {
++      if (error.code === 'ENOENT') {
++        res.writeHead(404, { 'Content-Type': 'text/plain; charset=UTF-8' });
++        res.end('Not found');
++        return;
++      }
++
++      res.writeHead(500, { 'Content-Type': 'text/plain; charset=UTF-8' });
++      res.end('Internal server error');
++      return;
++    }
++
++    res.writeHead(200, { 'Content-Type': getContentType(filePath) });
++    res.end(data);
++  }).listen(port, () => {
++    // eslint-disable-next-line no-console
++    console.log(`✅ Dev server running at http://localhost:${port}/app/index.html`);
++  });
++}
++
++if (import.meta.main) {
++  createServer();
++}
++
++export { createServer };
+diff --git a/src/app.js b/src/app.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..edfb9b11b943239747f5e7632be4ed14000fb1d7
+--- /dev/null
++++ b/src/app.js
+@@ -0,0 +1,62 @@
++import { renderHomePage } from './renderers/homeRenderer.js';
++import { renderProjectsPage } from './renderers/projectsRenderer.js';
++import { renderBlogPage } from './renderers/blogRenderer.js';
++import { renderContactPage } from './renderers/contactRenderer.js';
++import { fetchNavigationLinks, fetchSiteSettings } from './services/contentService.js';
++import { setText, showError } from './utils/dom.js';
++
++async function initNavigation() {
++  const navContainer = document.querySelector('[data-navigation]');
++  if (!navContainer) return;
++
++  try {
++    const [links, settings] = await Promise.all([
++      fetchNavigationLinks(),
++      fetchSiteSettings()
++    ]);
++
++    if (settings) {
++      const titleNodes = document.querySelectorAll('[data-site-title]');
++      titleNodes.forEach((node) => setText(node, settings.site_title));
++      const taglineNodes = document.querySelectorAll('[data-site-tagline]');
++      taglineNodes.forEach((node) => setText(node, settings.tagline));
++    }
++
++    if (!links?.length) {
++      navContainer.innerHTML = '';
++      showError(navContainer, 'Add navigation links in Supabase to populate the menu.');
++      return;
++    }
++
++    navContainer.innerHTML = links
++      .map(
++        (link) => `<a href="${link.href}" class="text-sm font-medium text-slate-200 transition hover:text-emerald-300">${link.label}</a>`
++      )
++      .join('');
++  } catch (error) {
++    console.error('Navigation failed to load', error);
++    showError(navContainer, 'Navigation unavailable.');
++  }
++}
++
++const pageRenderers = {
++  home: renderHomePage,
++  projects: renderProjectsPage,
++  blog: renderBlogPage,
++  contact: renderContactPage
++};
++
++async function bootstrap() {
++  await initNavigation();
++  const page = document.body.dataset.page ?? 'home';
++  const renderer = pageRenderers[page];
++  if (typeof renderer === 'function') {
++    await renderer();
++  }
++}
++
++document.addEventListener('DOMContentLoaded', () => {
++  bootstrap().catch((error) => {
++    console.error('Failed to bootstrap application', error);
++  });
++});
+diff --git a/src/config/env.example.js b/src/config/env.example.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..00207ac709ae7fc30fb6216f2db8f405a7af956c
+--- /dev/null
++++ b/src/config/env.example.js
+@@ -0,0 +1,4 @@
++export const SUPABASE_URL = 'https://your-project-ref.supabase.co';
++export const SUPABASE_ANON_KEY = 'your-public-anon-key';
++// Optionally expose row level security disabled service role key for trusted server-side scripts only.
++export const SUPABASE_SERVICE_ROLE_KEY = 'your-service-role-key';
+diff --git a/src/config/env.js b/src/config/env.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..7656520ba40737ca3c93e9f285d9d62b917df13c
+--- /dev/null
++++ b/src/config/env.js
+@@ -0,0 +1,9 @@
++const processEnv = typeof process !== 'undefined' && process.env ? process.env : {};
++const globalEnv = typeof globalThis !== 'undefined' ? globalThis : {};
++
++export const SUPABASE_URL =
++  globalEnv.SUPABASE_URL ?? processEnv.SUPABASE_URL ?? 'https://your-project-ref.supabase.co';
++export const SUPABASE_ANON_KEY =
++  globalEnv.SUPABASE_ANON_KEY ?? processEnv.SUPABASE_ANON_KEY ?? 'your-public-anon-key';
++export const SUPABASE_SERVICE_ROLE_KEY =
++  processEnv.SUPABASE_SERVICE_ROLE_KEY ?? globalEnv.SUPABASE_SERVICE_ROLE_KEY ?? 'your-service-role-key';
+diff --git a/src/lib/supabaseClient.js b/src/lib/supabaseClient.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..32c468c062349be4335dc1dedd488a2ade67c357
+--- /dev/null
++++ b/src/lib/supabaseClient.js
+@@ -0,0 +1,37 @@
++import { SUPABASE_ANON_KEY, SUPABASE_URL } from '../config/env.js';
++
++let createSupabaseClient;
++
++if (typeof window !== 'undefined' && typeof window.document !== 'undefined') {
++  ({ createClient: createSupabaseClient } = await import('https://esm.sh/@supabase/supabase-js@2.43.4'));
++} else {
++  try {
++    ({ createClient: createSupabaseClient } = await import('@supabase/supabase-js'));
++  } catch (error) {
++    createSupabaseClient = () => {
++      throw new Error('Supabase client is unavailable in this environment.');
++    };
++  }
++}
++
++const missingEnv =
++  !SUPABASE_URL ||
++  SUPABASE_URL.includes('your-project-ref') ||
++  !SUPABASE_ANON_KEY ||
++  SUPABASE_ANON_KEY.includes('your-public-anon-key');
++
++function createDisabledClient() {
++  return {
++    from() {
++      throw new Error('Supabase client is not configured. Provide SUPABASE_URL and SUPABASE_ANON_KEY values.');
++    }
++  };
++}
++
++export const supabase = missingEnv
++  ? createDisabledClient()
++  : createSupabaseClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
++      auth: {
++        persistSession: false
++      }
++    });
+diff --git a/src/renderers/blogRenderer.js b/src/renderers/blogRenderer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..230b4904e595d44bbb274f4e06aeaf3436d09e34
+--- /dev/null
++++ b/src/renderers/blogRenderer.js
+@@ -0,0 +1,27 @@
++import { fetchAllBlogPosts } from '../services/contentService.js';
++import { createCard, renderList, showError, formatDate } from '../utils/dom.js';
++
++export async function renderBlogPage() {
++  const container = document.querySelector('[data-blog-list]');
++
++  try {
++    const posts = await fetchAllBlogPosts();
++
++    if (!posts?.length) {
++      showError(container, 'Publish your first blog post in Supabase to see it here.');
++      return;
++    }
++
++    renderList(container, posts, (post) =>
++      createCard({
++        title: post.title,
++        description: post.excerpt,
++        link: post.url ?? `#${post.slug}`,
++        meta: post.published_at ? `${formatDate(post.published_at)} · ${post.read_time_minutes ?? 5} min read` : undefined
++      })
++    );
++  } catch (error) {
++    console.error('Unable to render blog posts', error);
++    showError(container, 'Fetching posts from Supabase failed.');
++  }
++}
+diff --git a/src/renderers/contactRenderer.js b/src/renderers/contactRenderer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..6e444c8033449af12f32f0a8bacb8fd3218c561c
+--- /dev/null
++++ b/src/renderers/contactRenderer.js
+@@ -0,0 +1,52 @@
++import { fetchSiteSettings, fetchContactChannels } from '../services/contentService.js';
++import { renderList, showError } from '../utils/dom.js';
++
++export async function renderContactPage() {
++  const intro = document.querySelector('[data-contact-intro]');
++  const channelsNode = document.querySelector('[data-contact-channels]');
++
++  try {
++    const [settings, channels] = await Promise.all([
++      fetchSiteSettings(),
++      fetchContactChannels()
++    ]);
++
++    if (settings && intro) {
++      intro.textContent = settings.contact_pitch ?? 'Let\'s team up on your next AI project.';
++    }
++
++    if (channels?.length) {
++      renderList(channelsNode, channels, (channel) => {
++        const item = document.createElement('a');
++        item.href = channel.url;
++        item.target = '_blank';
++        item.rel = 'noopener noreferrer';
++        item.className = 'flex items-center justify-between gap-4 rounded-xl border border-slate-700/80 bg-slate-900/70 px-5 py-4 transition hover:border-emerald-400/60 hover:bg-slate-900/90';
++
++        const content = document.createElement('div');
++        const label = document.createElement('span');
++        label.className = 'text-sm font-medium uppercase tracking-wide text-emerald-300/90';
++        label.textContent = channel.label;
++        const value = document.createElement('p');
++        value.className = 'text-lg font-semibold text-white';
++        value.textContent = channel.display_value ?? channel.url;
++
++        content.appendChild(label);
++        content.appendChild(value);
++        item.appendChild(content);
++
++        const hint = document.createElement('span');
++        hint.className = 'text-sm text-emerald-200/70';
++        hint.textContent = channel.description ?? 'Open channel';
++        item.appendChild(hint);
++
++        return item;
++      });
++    } else {
++      showError(channelsNode, 'Add contact channels in Supabase to make it easy for prospects to reach you.');
++    }
++  } catch (error) {
++    console.error('Unable to render contact page', error);
++    showError(channelsNode, 'We could not load contact information.');
++  }
++}
+diff --git a/src/renderers/homeRenderer.js b/src/renderers/homeRenderer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..6d53d26dbea1d8628295a6c88b54c0ec8ad2dd98
+--- /dev/null
++++ b/src/renderers/homeRenderer.js
+@@ -0,0 +1,86 @@
++import {
++  fetchSiteSettings,
++  fetchHomePage,
++  fetchFeaturedProjects,
++  fetchLatestBlogPosts,
++  fetchTestimonials
++} from '../services/contentService.js';
++import { createCard, renderList, setText, showError, formatDate } from '../utils/dom.js';
++
++export async function renderHomePage() {
++  const heroNode = document.querySelector('[data-hero]');
++  const featuredProjectsNode = document.querySelector('[data-featured-projects]');
++  const blogNode = document.querySelector('[data-latest-posts]');
++  const testimonialsNode = document.querySelector('[data-testimonials]');
++
++  try {
++    const [settings, page, projects, posts, testimonials] = await Promise.all([
++      fetchSiteSettings(),
++      fetchHomePage(),
++      fetchFeaturedProjects(),
++      fetchLatestBlogPosts(),
++      fetchTestimonials()
++    ]);
++
++    if (settings) {
++      setText(document.querySelector('[data-site-title]'), settings.site_title);
++      setText(document.querySelector('[data-site-tagline]'), settings.tagline);
++    }
++
++    if (page && heroNode) {
++      const { hero_heading, hero_subheading, call_to_action_label, call_to_action_url } = page;
++      setText(heroNode.querySelector('[data-hero-heading]'), hero_heading ?? settings?.site_title);
++      setText(heroNode.querySelector('[data-hero-subheading]'), hero_subheading ?? settings?.tagline);
++      const ctaLink = heroNode.querySelector('[data-hero-cta]');
++      if (ctaLink && call_to_action_url) {
++        ctaLink.href = call_to_action_url;
++        ctaLink.textContent = call_to_action_label ?? 'Let\'s collaborate';
++      }
++    }
++
++    if (projects?.length) {
++      renderList(featuredProjectsNode, projects, (project) =>
++        createCard({
++          title: project.title,
++          description: project.summary,
++          link: project.case_study_url,
++          meta: project.tech_stack
++        })
++      );
++    } else {
++      showError(featuredProjectsNode, 'No featured projects published yet.');
++    }
++
++    if (posts?.length) {
++      renderList(blogNode, posts, (post) =>
++        createCard({
++          title: post.title,
++          description: post.excerpt,
++          link: post.url ?? `./blog.html#${post.slug}`,
++          meta: post.published_at ? `Published ${formatDate(post.published_at)}` : undefined
++        })
++      );
++    } else {
++      showError(blogNode, 'Blog posts will appear here once published.');
++    }
++
++    if (testimonials?.length) {
++      renderList(testimonialsNode, testimonials, (testimonial) => {
++        const card = createCard({
++          title: testimonial.author_name,
++          description: testimonial.quote,
++          meta: testimonial.role
++        });
++        card.classList.add('bg-emerald-950/30', 'border-emerald-500/20');
++        return card;
++      });
++    } else {
++      showError(testimonialsNode, 'Collect client testimonials to boost credibility.');
++    }
++  } catch (error) {
++    console.error('Unable to render home page', error);
++    [heroNode, featuredProjectsNode, blogNode, testimonialsNode].forEach((node) =>
++      showError(node, 'We were unable to load content. Please try again later.')
++    );
++  }
++}
+diff --git a/src/renderers/projectsRenderer.js b/src/renderers/projectsRenderer.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..1c4c2e9195a552fcb80b67e459ab404ce16c376b
+--- /dev/null
++++ b/src/renderers/projectsRenderer.js
+@@ -0,0 +1,67 @@
++import { fetchAllProjects } from '../services/contentService.js';
++import { createCard, renderList, showError } from '../utils/dom.js';
++
++export async function renderProjectsPage() {
++  const container = document.querySelector('[data-project-list]');
++  const filters = document.querySelector('[data-project-filters]');
++
++  try {
++    const projects = await fetchAllProjects();
++
++    if (!projects?.length) {
++      showError(container, 'Publish projects in Supabase to see them listed here.');
++      return;
++    }
++
++    const techStacks = Array.from(new Set(projects.flatMap((project) => (project.tech_stack ?? '').split(',').map((t) => t.trim()).filter(Boolean))));
++
++    if (filters) {
++      filters.innerHTML = '';
++      const allButton = document.createElement('button');
++      allButton.type = 'button';
++      allButton.textContent = 'All';
++      allButton.className = 'filter-button active';
++      allButton.dataset.filter = 'all';
++      filters.appendChild(allButton);
++
++      techStacks.forEach((stack) => {
++        const button = document.createElement('button');
++        button.type = 'button';
++        button.className = 'filter-button';
++        button.textContent = stack;
++        button.dataset.filter = stack;
++        filters.appendChild(button);
++      });
++
++      filters.addEventListener('click', (event) => {
++        if (event.target.matches('button[data-filter]')) {
++          const { filter } = event.target.dataset;
++          filters.querySelectorAll('button').forEach((btn) => btn.classList.remove('active'));
++          event.target.classList.add('active');
++
++          const filtered = filter === 'all'
++            ? projects
++            : projects.filter((project) => project.tech_stack?.toLowerCase().includes(filter.toLowerCase()));
++
++          renderProjects(filtered);
++        }
++      });
++    }
++
++    function renderProjects(list) {
++      renderList(container, list, (project) =>
++        createCard({
++          title: project.title,
++          description: project.summary,
++          link: project.case_study_url,
++          meta: project.tech_stack
++        })
++      );
++    }
++
++    renderProjects(projects);
++  } catch (error) {
++    console.error('Unable to render projects', error);
++    showError(container, 'We hit a snag fetching projects from Supabase.');
++  }
++}
+diff --git a/src/services/contentService.js b/src/services/contentService.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..ad8f079b8f759b5d2b2d9f1dba94da8ffa475af3
+--- /dev/null
++++ b/src/services/contentService.js
+@@ -0,0 +1,114 @@
++import { supabase } from '../lib/supabaseClient.js';
++
++const cache = new Map();
++let client = supabase;
++
++function getCacheKey(table, options) {
++  return `${table}:${JSON.stringify(options ?? {})}`;
++}
++
++function applyFilters(query, filters = []) {
++  return filters.reduce((acc, filter) => {
++    const { column, operator = 'eq', value } = filter;
++    if (typeof acc[operator] !== 'function') {
++      throw new Error(`Unsupported filter operator: ${operator}`);
++    }
++    return acc[operator](column, value);
++  }, query);
++}
++
++export async function fetchRecords(table, { filters = [], order, limit, single = false } = {}) {
++  const cacheKey = getCacheKey(table, { filters, order, limit, single });
++  if (cache.has(cacheKey)) {
++    return cache.get(cacheKey);
++  }
++
++  let query = client.from(table).select('*');
++
++  if (filters.length) {
++    query = applyFilters(query, filters);
++  }
++
++  if (order?.column) {
++    query = query.order(order.column, { ascending: order.ascending ?? true, nullsFirst: order.nullsFirst ?? false });
++  }
++
++  if (limit) {
++    query = query.limit(limit);
++  }
++
++  const { data, error } = single ? await query.single() : await query;
++
++  if (error) {
++    console.error(`Failed to fetch from ${table}:`, error.message);
++    throw error;
++  }
++
++  cache.set(cacheKey, data);
++  return data;
++}
++
++export function __setSupabaseClient(mockClient) {
++  client = mockClient;
++  cache.clear();
++}
++
++export function __resetSupabaseClient() {
++  client = supabase;
++  cache.clear();
++}
++
++export async function fetchSiteSettings() {
++  return fetchRecords('site_settings', { single: true });
++}
++
++export async function fetchNavigationLinks() {
++  return fetchRecords('navigation_links', { order: { column: 'position', ascending: true } });
++}
++
++export async function fetchHomePage() {
++  return fetchRecords('pages', {
++    filters: [{ column: 'slug', value: 'home' }],
++    single: true
++  });
++}
++
++export async function fetchFeaturedProjects(limit = 3) {
++  return fetchRecords('projects', {
++    filters: [{ column: 'is_featured', value: true }],
++    order: { column: 'position', ascending: true },
++    limit
++  });
++}
++
++export async function fetchAllProjects() {
++  return fetchRecords('projects', {
++    order: { column: 'position', ascending: true }
++  });
++}
++
++export async function fetchLatestBlogPosts(limit = 3) {
++  return fetchRecords('blog_posts', {
++    order: { column: 'published_at', ascending: false },
++    limit
++  });
++}
++
++export async function fetchAllBlogPosts() {
++  return fetchRecords('blog_posts', {
++    order: { column: 'published_at', ascending: false }
++  });
++}
++
++export async function fetchTestimonials(limit = 5) {
++  return fetchRecords('testimonials', {
++    order: { column: 'position', ascending: true },
++    limit
++  });
++}
++
++export async function fetchContactChannels() {
++  return fetchRecords('contact_channels', {
++    order: { column: 'position', ascending: true }
++  });
++}
+diff --git a/src/utils/dom.js b/src/utils/dom.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..21d48e7e4842065517c1cb1bfcd0b82c5892e16a
+--- /dev/null
++++ b/src/utils/dom.js
+@@ -0,0 +1,77 @@
++export function clearChildren(node) {
++  if (!node) return;
++  while (node.firstChild) {
++    node.removeChild(node.firstChild);
++  }
++}
++
++export function renderList(node, items, renderItem) {
++  if (!node) return;
++  clearChildren(node);
++  items.forEach((item, index) => {
++    const element = renderItem(item, index);
++    if (element) {
++      node.appendChild(element);
++    }
++  });
++}
++
++export function createCard({ title, description, link, meta }) {
++  const wrapper = document.createElement('article');
++  wrapper.className = 'rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-emerald-400/80 hover:shadow-emerald-500/20';
++
++  const heading = document.createElement('h3');
++  heading.className = 'text-xl font-semibold text-white';
++  heading.textContent = title;
++  wrapper.appendChild(heading);
++
++  if (meta) {
++    const metaEl = document.createElement('p');
++    metaEl.className = 'mt-1 text-sm uppercase tracking-wide text-emerald-300/80';
++    metaEl.textContent = meta;
++    wrapper.appendChild(metaEl);
++  }
++
++  if (description) {
++    const desc = document.createElement('p');
++    desc.className = 'mt-3 text-sm text-slate-300';
++    desc.textContent = description;
++    wrapper.appendChild(desc);
++  }
++
++  if (link) {
++    const anchor = document.createElement('a');
++    anchor.className = 'mt-6 inline-flex items-center gap-2 text-sm font-medium text-emerald-300 hover:text-emerald-200';
++    anchor.href = link;
++    anchor.target = '_blank';
++    anchor.rel = 'noopener noreferrer';
++    anchor.textContent = 'View details';
++    wrapper.appendChild(anchor);
++  }
++
++  return wrapper;
++}
++
++export function showError(node, message) {
++  if (!node) return;
++  clearChildren(node);
++  const error = document.createElement('div');
++  error.className = 'rounded-lg border border-rose-500/50 bg-rose-950/60 p-4 text-sm text-rose-200';
++  error.textContent = message;
++  node.appendChild(error);
++}
++
++export function setText(node, value) {
++  if (node) {
++    node.textContent = value;
++  }
++}
++
++export function formatDate(value) {
++  try {
++    return new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(new Date(value));
++  } catch (error) {
++    console.warn('Unable to format date', error);
++    return value;
++  }
++}
+diff --git a/supabase/schema.sql b/supabase/schema.sql
+new file mode 100644
+index 0000000000000000000000000000000000000000..b5b1e0df4ac40de91b942fe22af59726c8da5460
+--- /dev/null
++++ b/supabase/schema.sql
+@@ -0,0 +1,97 @@
++-- Supabase schema for the dynamic MVP portfolio
++create table if not exists site_settings (
++  id bigint primary key,
++  site_title text not null,
++  tagline text,
++  contact_pitch text,
++  created_at timestamptz default timezone('utc', now()),
++  updated_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists navigation_links (
++  id bigint primary key,
++  label text not null,
++  href text not null,
++  position int default 0,
++  created_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists pages (
++  id bigint primary key,
++  slug text unique not null,
++  hero_heading text,
++  hero_subheading text,
++  call_to_action_label text,
++  call_to_action_url text,
++  created_at timestamptz default timezone('utc', now()),
++  updated_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists projects (
++  id bigint primary key,
++  title text not null,
++  summary text,
++  tech_stack text,
++  case_study_url text,
++  is_featured boolean default false,
++  position int default 0,
++  created_at timestamptz default timezone('utc', now()),
++  updated_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists blog_posts (
++  id bigint primary key,
++  title text not null,
++  slug text unique,
++  excerpt text,
++  url text,
++  published_at timestamptz,
++  read_time_minutes int,
++  created_at timestamptz default timezone('utc', now()),
++  updated_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists testimonials (
++  id bigint primary key,
++  author_name text not null,
++  role text,
++  quote text not null,
++  position int default 0,
++  created_at timestamptz default timezone('utc', now())
++);
++
++create table if not exists contact_channels (
++  id bigint primary key,
++  label text not null,
++  url text not null,
++  description text,
++  display_value text,
++  position int default 0,
++  created_at timestamptz default timezone('utc', now())
++);
++
++-- Enable Row Level Security (RLS)
++alter table site_settings enable row level security;
++alter table navigation_links enable row level security;
++alter table pages enable row level security;
++alter table projects enable row level security;
++alter table blog_posts enable row level security;
++alter table testimonials enable row level security;
++alter table contact_channels enable row level security;
++
++-- Basic policies that allow public read access and service role full access
++create policy "Public read" on site_settings for select using (true);
++create policy "Public read" on navigation_links for select using (true);
++create policy "Public read" on pages for select using (true);
++create policy "Public read" on projects for select using (true);
++create policy "Public read" on blog_posts for select using (true);
++create policy "Public read" on testimonials for select using (true);
++create policy "Public read" on contact_channels for select using (true);
++
++create policy "Service role full access" on site_settings for all using (auth.role() = 'service_role');
++create policy "Service role full access" on navigation_links for all using (auth.role() = 'service_role');
++create policy "Service role full access" on pages for all using (auth.role() = 'service_role');
++create policy "Service role full access" on projects for all using (auth.role() = 'service_role');
++create policy "Service role full access" on blog_posts for all using (auth.role() = 'service_role');
++create policy "Service role full access" on testimonials for all using (auth.role() = 'service_role');
++create policy "Service role full access" on contact_channels for all using (auth.role() = 'service_role');
+diff --git a/tests/contentService.test.js b/tests/contentService.test.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..26b90ea2ffdd3a1640879594dd68515bc4fd38c5
+--- /dev/null
++++ b/tests/contentService.test.js
+@@ -0,0 +1,130 @@
++import assert from 'node:assert/strict';
++import test from 'node:test';
++
++function createQueryResponse(data, error = null) {
++  const response = { data, error };
++  const calls = {
++    eq: [],
++    order: [],
++    limit: [],
++    single: 0
++  };
++
++  const promise = Promise.resolve(response);
++
++  promise.eq = (column, value) => {
++    calls.eq.push({ column, value });
++    return promise;
++  };
++
++  promise.order = (column, options) => {
++    calls.order.push({ column, options });
++    return promise;
++  };
++
++  promise.limit = (value) => {
++    calls.limit.push(value);
++    return promise;
++  };
++
++  promise.single = () => {
++    calls.single += 1;
++    return Promise.resolve(response);
++  };
++
++  promise.calls = calls;
++  return promise;
++}
++
++function createClient(query) {
++  const calls = {
++    from: [],
++    select: []
++  };
++
++  return {
++    calls,
++    from(table) {
++      calls.from.push(table);
++      return {
++        select(selection) {
++          calls.select.push(selection);
++          return query;
++        }
++      };
++    }
++  };
++}
++
++test('fetchRecords caches results for identical lookups', async (t) => {
++  const module = await import('../src/services/contentService.js');
++  const query = createQueryResponse([{ id: 1 }]);
++  const client = createClient(query);
++  module.__setSupabaseClient(client);
++  t.after(() => module.__resetSupabaseClient());
++
++  const first = await module.fetchRecords('projects');
++  const second = await module.fetchRecords('projects');
++
++  assert.deepEqual(first, [{ id: 1 }]);
++  assert.deepEqual(second, first);
++  assert.equal(client.calls.from.length, 1);
++});
++
++test('fetchFeaturedProjects applies filters, ordering, and limit', async (t) => {
++  const module = await import('../src/services/contentService.js');
++  const query = createQueryResponse([{ id: 1 }]);
++  const client = createClient(query);
++  module.__setSupabaseClient(client);
++  t.after(() => module.__resetSupabaseClient());
++
++  await module.fetchFeaturedProjects(5);
++
++  assert.deepEqual(client.calls.from, ['projects']);
++  assert.equal(query.calls.eq.length, 1);
++  assert.deepEqual(query.calls.eq[0], { column: 'is_featured', value: true });
++  assert.equal(query.calls.order.length, 1);
++  assert.deepEqual(query.calls.order[0], {
++    column: 'position',
++    options: { ascending: true, nullsFirst: false }
++  });
++  assert.equal(query.calls.limit.length, 1);
++  assert.equal(query.calls.limit[0], 5);
++});
++
++test('fetchSiteSettings uses single-row selection', async (t) => {
++  const module = await import('../src/services/contentService.js');
++  const data = { id: 1, site_title: 'Test' };
++  const query = createQueryResponse(data);
++  query.single = () => {
++    query.calls.single += 1;
++    return Promise.resolve({ data, error: null });
++  };
++  const client = createClient(query);
++  module.__setSupabaseClient(client);
++  t.after(() => module.__resetSupabaseClient());
++
++  const result = await module.fetchSiteSettings();
++
++  assert.deepEqual(result, data);
++  assert.equal(query.calls.single, 1);
++});
++
++test('fetchRecords throws when Supabase returns an error', async (t) => {
++  const module = await import('../src/services/contentService.js');
++  const error = { message: 'failure' };
++  const query = createQueryResponse(null, error);
++  const client = createClient(query);
++  module.__setSupabaseClient(client);
++  t.after(() => module.__resetSupabaseClient());
++
++  const consoleErrors = [];
++  const originalError = console.error;
++  console.error = (...args) => consoleErrors.push(args);
++  t.after(() => {
++    console.error = originalError;
++  });
++
++  await assert.rejects(() => module.fetchRecords('projects'), error);
++  assert.equal(consoleErrors.length > 0, true);
++});
