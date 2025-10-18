@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio · Dynamic MVP</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .filter-button {
+        border-radius: 9999px;
+        border: 1px solid rgba(100, 116, 139, 0.6);
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: rgb(226, 232, 240);
+        transition: all 0.2s ease;
+      }
+      .filter-button:hover {
+        border-color: rgb(16, 185, 129);
+        color: rgb(110, 231, 183);
+      }
+      .filter-button.active {
+        border-color: rgb(16, 185, 129);
+        background-color: rgba(16, 185, 129, 0.1);
+        color: rgb(16, 185, 129);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="home">
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
+        <nav class="flex items-center gap-6" data-navigation>
+          <span class="text-sm text-slate-500">Loading navigation…</span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6 py-16 space-y-20">
+      <section class="grid gap-10 lg:grid-cols-2" data-hero>
+        <div class="space-y-6">
+          <p class="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-300/80">AI Researcher & Builder</p>
+          <h1 class="text-4xl font-bold text-white md:text-5xl" data-hero-heading>Building intelligent systems.</h1>
+          <p class="text-lg text-slate-300" data-hero-subheading>
+            I help founders ship AI-powered products faster using modern research, thoughtful design, and reliable engineering.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              class="inline-flex items-center gap-3 rounded-full border border-emerald-500/60 bg-emerald-500/10 px-6 py-3 font-medium text-emerald-200 transition hover:bg-emerald-500/20"
+              data-hero-cta
+              href="./contact.html"
+            >Start a project</a>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-800/80 bg-slate-900/40 p-8 shadow-xl shadow-black/30">
+          <h2 class="text-lg font-semibold text-white">Momentum snapshot</h2>
+          <dl class="mt-6 grid grid-cols-2 gap-6 text-sm text-slate-300">
+            <div>
+              <dt class="text-emerald-300/80">Shipped products</dt>
+              <dd class="text-3xl font-bold text-white">12</dd>
+            </div>
+            <div>
+              <dt class="text-emerald-300/80">Research citations</dt>
+              <dd class="text-3xl font-bold text-white">48</dd>
+            </div>
+            <div>
+              <dt class="text-emerald-300/80">Avg. ROI</dt>
+              <dd class="text-3xl font-bold text-white">4.6x</dd>
+            </div>
+            <div>
+              <dt class="text-emerald-300/80">Countries served</dt>
+              <dd class="text-3xl font-bold text-white">9</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <header class="flex items-end justify-between">
+          <div>
+            <h2 class="text-3xl font-semibold text-white">Featured work</h2>
+            <p class="text-sm text-slate-400">Curated projects automatically pulled from Supabase</p>
+          </div>
+          <a class="text-sm font-medium text-emerald-300 hover:text-emerald-200" href="./projects.html">See all</a>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-featured-projects>
+          <p class="text-sm text-slate-500">Loading featured projects…</p>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <header class="flex items-end justify-between">
+          <div>
+            <h2 class="text-3xl font-semibold text-white">Latest thinking</h2>
+            <p class="text-sm text-slate-400">Long-form articles, notes, and research updates</p>
+          </div>
+          <a class="text-sm font-medium text-emerald-300 hover:text-emerald-200" href="./blog.html">Read the blog</a>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-latest-posts>
+          <p class="text-sm text-slate-500">Loading blog posts…</p>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <header>
+          <h2 class="text-3xl font-semibold text-white">Testimonials</h2>
+          <p class="text-sm text-slate-400">Signals from founders and research partners</p>
+        </header>
+        <div class="grid gap-6 md:grid-cols-2" data-testimonials>
+          <p class="text-sm text-slate-500">Loading testimonials…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950/80">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
+        <p>© <span data-year></span> Built with Supabase.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="../src/app.js"></script>
+  </body>
+</html>
