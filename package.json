@@ -1,0 +1,16 @@
+{
+  "name": "uday-portfolio-mvp",
+  "version": "1.0.0",
+  "description": "Dynamic MVP portfolio powered by Supabase as a headless CMS.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/devServer.js",
+    "sync:payload": "node cms/payload-to-supabase.js",
+    "sync:keystone": "node cms/keystone-to-supabase.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.4",
+    "dotenv": "^16.4.5"
+  }
+}

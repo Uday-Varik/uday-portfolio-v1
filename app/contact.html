@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact · Dynamic MVP</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" data-page="contact">
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a class="text-lg font-semibold text-emerald-300" href="./index.html" data-site-title>Uday Portfolio</a>
+        <nav class="flex items-center gap-6" data-navigation>
+          <span class="text-sm text-slate-500">Loading navigation…</span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-4xl px-6 py-16 space-y-12">
+      <header class="space-y-4">
+        <p class="text-sm uppercase tracking-[0.4em] text-emerald-300/80">Collaborate</p>
+        <h1 class="text-4xl font-bold text-white">Contact</h1>
+        <p class="max-w-2xl text-lg text-slate-300" data-contact-intro>
+          Let\'s team up on your next AI project. Every contact channel lives in Supabase so you can update details without redeploying the site.
+        </p>
+      </header>
+
+      <section class="space-y-4" data-contact-channels>
+        <p class="text-sm text-slate-500">Loading contact options…</p>
+      </section>
+
+      <section class="rounded-3xl border border-slate-800/70 bg-slate-900/40 p-10">
+        <h2 class="text-2xl font-semibold text-white">Integrate with your CMS</h2>
+        <p class="mt-3 text-sm text-slate-400">
+          Use the provided Payload and Keystone scripts to push structured content into Supabase. They handle upserts, so you can run them repeatedly as part of your publishing pipeline.
+        </p>
+        <a class="mt-6 inline-flex items-center gap-3 text-sm font-medium text-emerald-300 hover:text-emerald-200" href="https://supabase.com" target="_blank" rel="noopener noreferrer">
+          Explore Supabase docs
+        </a>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950/80">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <p data-site-tagline>Helping mission-driven teams build trustworthy AI.</p>
+        <p>© <span data-year></span> Built with Supabase.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="../src/app.js"></script>
+  </body>
+</html>

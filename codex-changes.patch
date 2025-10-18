@@ -9,61 +9,9 @@ index 0000000000000000000000000000000000000000..f79ccfbb64de0dfd0901a50005c095b9
 +.env.*
 +package-lock.json
 +.DS_Store
-diff --git a/README.md b/README.md
-index 805ea8aa5fb0144efb03d24117f820a9e69c9764..416e7fc3a7d93e3182d1b52dff8c08be6999ad8a 100644
-GIT binary patch
-literal 5048
-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
-E3$yyda{vGU
 
-literal 44
-wcmezWPnki1p_CzoA(5eyL6@O`A)ld$p@bm~NarwQ0!dwlG6q8iUIs1(0QRH^>Hq)$
+# NOTE: README.md binary changes removed for compatibility.
+# If Codex changed README.md content, apply it manually.
 
 diff --git a/app/blog.html b/app/blog.html
 new file mode 100644
